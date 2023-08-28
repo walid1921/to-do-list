@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
+    rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+
+<body class="p-4 bg-gradient-to-r from-blue-300 to-purple-300 h-screen flex justify-center items-center">
+
+  <div
+    class="backdrop-blur-sm bg-white/40 h-[500px] w-[800px] border  rounded-xl py-7 border-blue-400 transition-all ease-in-out duration-500 flex flex-col">
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="text-center text-2xl font-nunito-sans mb-4 ">Today's Tasks</h1>
+      <hr class="w-1/3 mb-6">
+    </div>
+
+    <!--! Left section -->
+    <div class="w-full flex items-center">
+      <div class="pl-3 list w-2/5 h-[380px] border-r border-blue-400 mr-5">
+        <h2 class="mb-7 text-center font-semibold">My Lists</h2>
+
+        <ul class="flex flex-col gap-2 pl-6 mr-3 overflow-y-scroll h-60 custom-scrollbar" data-lists></ul>
+
+        <form class="flex gap-2 mt-6 pl-6" action="" data-new-list-form>
+          <input data-new-list-input type="text" class="new-list w-[50%] px-2 focus:outline-none rounded-md border  focus:border-sky-700 border-gray-400 bg-white/40
+          focus:bg-white transition-all ease-in-out duration-400 hover:border-sky-700 " placeholder="New List"
+            aria-label="New List" />
+          <button area-label="create-newList">
+            <img class="w-7 h-7 cursor-pointer" src="../assets/icons/add_circle_FILL0_wght200_GRAD0_opsz40.svg" alt="">
+          </button>
+        </form>
+      </div>
+
+
+
+      <!--! right section -->
+      <div class="w-3/5 h-[380px] flex flex-col" data-list-display-container>
+        <h2 class="mb-7 text-center text-sky-700 font-semibold text-lg" data-list-title>Home Tasks</h2>
+        <!-- Add Task -->
+        <div>
+          <form class="flex gap-2 justify-center" action="" data-new-task-form>
+            <input type="text" placeholder="Add Task"
+              class='p-2 focus:outline-none rounded-md border text-sm  focus:border-sky-700 border-gray-400 bg-white/40 focus:bg-white transition-all ease-in-out duration-400 hover:border-sky-700'
+              aria-label="Add Task" data-new-task-input />
+            <button area-label="create-newTask">
+              <img class="w-7 h-7 cursor-pointer" src="../assets/icons/add_circle_FILL0_wght200_GRAD0_opsz40.svg"
+                alt="">
+            </button>
+          </form>
+        </div>
+
+        <ul class="flex flex-col gap-4 mt-6 mr-3 px-3 pt-1 overflow-y-scroll h-40 custom-scrollbar" data-tasks>
+        </ul>
+
+        <div class="flex items-center justify-center gap-5 mt-8 ">
+          <button
+            class="flex items-center text-black border tracking-wide border-color-grad-1 bg-gradient-to-br from-color-grad-1 to-color-grad-2 rounded-full py-2 px-4 cursor-pointer transition-all ease-in duration-150 hover:opacity-75 center gap-3" data-clear-complete-tasks-button>
+            <p class="text-sm font-semibold">Delete Task</p> <img class="w-6 h-6 cursor-pointer"
+              src="../assets/icons/cleaning_services_FILL0_wght200_GRAD0_opsz40.svg" alt="">
+          </button>
+          <button class="flex items-center text-black border tracking-wide border-color-grad-1 bg-gradient-to-br from-red-200 to-purple-300 rounded-full py-2 px-4 cursor-pointer transition-all ease-in duration-150 hover:opacity-75 center gap-3" data-delete-list-button><p class="text-sm font-semibold">Delete List</p><img class="w-6 h-6 cursor-pointer"
+              src="../assets/icons/delete_FILL0_wght200_GRAD0_opsz40.svg" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template id="task-template">
+    <div class="task w-full flex items-center justify-between cursor-pointer border-b border-sky-700 pb-2 ">
+      <input type="checkbox">
+      <label class="flex items-center">
+        <span class="custom-checkbox"></span></label>
+      <div class="flex items-center gap-5">
+      </div>
+    </div>
+  </template>
+</body>
+</html>
