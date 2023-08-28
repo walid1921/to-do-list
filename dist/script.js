@@ -38,7 +38,7 @@ tasksContainer.addEventListener('click', e => {
 })
 
 clearCompleteTasks.addEventListener('click', e => {
-  if(window.confirm('Are you sure you want to delete completed tasks?')){
+  if(window.confirm('Are you sure you want to delete completed task(s)?')){
   const selectedList = lists.find(list => list.id === selectedListId)
   selectedList.tasks = selectedList.tasks.filter(task => !task.complete)
   saveAndRender()
