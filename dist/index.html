@@ -25,13 +25,13 @@
 
     <!--! Left section -->
     <div class="w-full flex items-center">
-      <div class="pl-3 list w-2/5 h-[380px] border-r border-blue-400 mr-5">
+      <div class="pl-3 list w-2/5 h-[380px] border-r border-blue-400 mr-0 md:m-5">
         <h2 class="mb-7 text-center font-semibold">My Lists</h2>
 
-        <ul class="flex flex-col gap-2 pl-6 mr-3 overflow-y-scroll h-60 custom-scrollbar" data-lists></ul>
+        <ul class="flex flex-col gap-2 mr-0 pl-2 md:pl-6 md:mr-3 overflow-y-scroll h-60 custom-scrollbar" data-lists></ul>
 
-        <form class="flex gap-2 mt-6 pl-6" action="" data-new-list-form>
-          <input data-new-list-input type="text" class="new-list w-[50%] px-2 focus:outline-none rounded-md border  focus:border-sky-700 border-gray-400 bg-white/40
+        <form class="flex gap-2 justify-center" action="" data-new-list-form>
+          <input data-new-list-input type="text" class="text-sm new-list w-[50%] px-2 focus:outline-none rounded-md border  focus:border-sky-700 border-gray-400 bg-white/40
           focus:bg-white transition-all ease-in-out duration-400 hover:border-sky-700 " placeholder="New List"
             aria-label="New List" />
           <button area-label="create-newList">
@@ -52,7 +52,7 @@
         <div>
           <form class="flex gap-2 justify-center" action="" data-new-task-form>
             <input type="text" placeholder="Add Task"
-              class='p-2 focus:outline-none rounded-md border text-sm  focus:border-sky-700 border-gray-400 bg-white/40 focus:bg-white transition-all ease-in-out duration-400 hover:border-sky-700'
+              class='w-[55%] md:py-2 px-2 py-0 focus:outline-none rounded-md border text-sm  focus:border-sky-700 border-gray-400 bg-white/40 focus:bg-white transition-all ease-in-out duration-400 hover:border-sky-700'
               aria-label="Add Task" data-new-task-input />
             <button area-label="create-newTask">
               <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="#0369a1" viewBox="0 -960 960 960" width="30">
@@ -66,21 +66,21 @@
         <ul class="flex flex-col gap-4 mt-6 mr-3 px-3 pt-1 overflow-y-scroll h-40 custom-scrollbar" data-tasks>
         </ul>
 
-        <div class="flex items-center justify-center gap-5 mt-8 ">
+        <div class="flex items-center justify-center md:gap-5 gap-2 mt-8 ">
           <button
-            class="flex items-center text-black border tracking-wide border-color-grad-1 bg-gradient-to-br from-color-grad-1 to-color-grad-2 rounded-full py-2 px-4 cursor-pointer transition-all ease-in duration-150 hover:opacity-75 center gap-3"
+            class="flex items-center text-black border tracking-wide border-color-grad-1 bg-gradient-to-br from-color-grad-1 to-color-grad-2 rounded-full py-2 md:px-4 px-2 cursor-pointer transition-all ease-in duration-150 hover:opacity-75 center md:gap-3 gap-1"
             data-clear-complete-tasks-button>
-            <p class="text-sm font-semibold">Delete Task</p> <svg xmlns="http://www.w3.org/2000/svg" height="25"
-              fill="#7e22ce" viewBox="0 -960 960 960" width="25">
+            <p class="md:text-sm text-[10px] font-semibold">Delete Task</p> <svg xmlns="http://www.w3.org/2000/svg"
+              fill="#7e22ce" viewBox="0 -960 960 960" class="w-4 h-4 md:w-6 md:h-6">
               <path
                 d="M155.384-75.384v-232.309q0-73.423 51.753-125.173t125.17-51.75h58.462V-810.77q0-23.718 17.372-41.089 17.372-17.372 41.09-17.372h61.538q23.718 0 41.09 17.372 17.372 17.371 17.372 41.089v326.154h58.462q73.423 0 125.173 51.75t51.75 125.173v232.309H155.384Zm33.847-33.847h120.256v-143.076q0-7.193 4.86-12.058 4.861-4.866 12.423-4.866 6.538 0 11.55 4.866 5.013 4.865 5.013 12.058v143.076h119.744v-143.076q0-7.193 4.86-12.058 4.861-4.866 12.167-4.866t12.063 4.866q4.756 4.865 4.756 12.058v143.076H617.18v-143.076q0-7.193 4.86-12.058 4.86-4.866 12.423-4.866 6.537 0 11.55 4.866 5.013 4.865 5.013 12.058v143.076h119.743v-198.462q0-59.444-41.816-101.26t-101.177-41.816H332.307q-58.974 0-101.025 41.816-42.051 41.816-42.051 101.26v198.462Zm346.154-375.385V-810.77q0-10.769-6.923-17.692t-17.693-6.923h-61.538q-10.77 0-17.693 6.923-6.923 6.923-6.923 17.692v326.154h110.77Z" />
             </svg>
           </button>
           <button
-            class="flex items-center text-black border tracking-wide border-color-grad-1 bg-gradient-to-br from-red-200 to-purple-300 rounded-full py-2 px-4 cursor-pointer transition-all ease-in duration-150 hover:opacity-75 center gap-3"
+            class="flex items-center text-black border tracking-wide border-color-grad-1 bg-gradient-to-br from-red-200 to-purple-300 rounded-full py-2 md:px-4 px-2 cursor-pointer transition-all ease-in duration-150 hover:opacity-75 center md:gap-3 gap-1"
             data-delete-list-button>
-            <p class="text-sm font-semibold">Delete List</p>
-            <svg xmlns="http://www.w3.org/2000/svg" height="25" fill="#ff0000" viewBox="0 -960 960 960" width="25">
+            <p class="md:text-sm text-[10px] font-semibold">Delete List</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#ff0000" viewBox="0 -960 960 960" class="w-4 h-4 md:w-6 md:h-6">
               <path
                 d="M298.615-160q-23.91 0-41.186-17.275-17.275-17.276-17.275-41.186v-510.77H200v-33.846h156.102v-27.693h247.796v27.693H760v33.846h-40.154v510.77q0 24.577-16.942 41.519Q685.962-160 661.385-160h-362.77ZM686-729.231H274v510.77q0 10.769 7.179 17.692 7.18 6.923 17.436 6.923h362.77q9.231 0 16.923-7.692Q686-209.23 686-218.461v-510.77ZM394.41-275.795h33.846v-372.154H394.41v372.154Zm137.334 0h33.846v-372.154h-33.846v372.154ZM274-729.231v535.385-535.385Z" />
             </svg>
